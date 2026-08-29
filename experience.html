@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Story by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- JS for theme switch -->
+		<script type="text/javascript" src="assets/js/darkmode.js" defer></script>
+
+		<style>
+			body {
+				background-image: url('images/icon-background-smaller.webp');
+				background-color: var(--pal-background-shade);
+				background-blend-mode: overlay; /*multiply, overlay, soft-light, */
+			}
+		</style>
+	</head>
+
+
+	<!-- BODY -->
+	<body>
+		<!-- Navbar -->
+			<nav>
+				<!-- Mobile sidebar menu -->
+				<ul class="sidebar">
+					<li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960"
+								width="26">
+								<path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+							</svg></a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Forum</a></li>
+				</ul>
+			
+				<!-- Desktop menu -->
+				<ul>
+					<li><a href="index.html">Philip Savoy</a></li>
+					<li class="hideOnMobile"><a href="#">Blog</a></li>
+					<li class="hideOnMobile"><a href="#">Products</a></li>
+					<li class="hideOnMobile"><a href="#">About</a></li>
+					<li class="hideOnMobile"><a href="#">Forum</a></li>
+					<li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+								viewBox="0 96 960 960" width="26">
+								<path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+							</svg></a></li>
+					<button id="theme-switch">
+						<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+							<path
+								d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+							<path
+								d="M338.5-338.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+						</svg>
+					</button>
+				</ul>
+			</nav>
+			
+			<script>
+				function showSidebar() {
+					const sidebar = document.querySelector('.sidebar')
+					sidebar.style.display = 'flex'
+				}
+				function hideSidebar() {
+					const sidebar = document.querySelector('.sidebar')
+					sidebar.style.display = 'none'
+				}
+			</script>
+
+
+		<!-- Timeline -->
+		<div class="timeline-wrapper">
+						
+			<h2>Work Experience</h2>
+						
+			<!-- Timeline item-->
+			<div class="timeline-card">
+				<div class="timeline-heading">
+					<div class="timeline-employer"><h3>United States Geological Survey</h3></div>
+					<div class="timeline-date"><h3>Mar 2022 - Apr 2025</h3></div>
+				</div>
+
+				<p class="timeline-position">Physical Scientist</p>
+				
+				<ul>
+					<li>
+						Led or contributed to 6 peer-reviewed publications by working with academic, 
+						state, and federal collaborators to develop new models of river and lake water quality.
+					</li>
+					<li>
+						Designed models to predict algal concentrations and harmful algal blooms (HABs) across 110 New York State lakes and
+						examined effectiveness of NYSDEC water quality monitoring data for making accurate predictions. Identified a simple,
+						low-cost measure that was as effective as costlier laboratory measures for predicting HABs.
+					</li>
+					<li>
+						Created public datasets with over 100,000 records with data on water quality, climate, and land use.
+					</li>
+				</ul>
+
+				<hr />
+				<p>Example deliverables</p>
+				<a href="#first" class="button primary action small smooth-scroll-middle">Get Started</a>
+				<a href="#first" class="button primary action small smooth-scroll-middle">Get Started</a>
+				<a href="#first" class="button primary action small smooth-scroll-middle">Get Started</a>
+			</div>
+
+			<!-- Timeline item-->
+			<div class="timeline-card">
+				<div class="timeline-heading">
+					<div class="timeline-employer">
+						<h3>Employer</h3>
+					</div>
+					<div class="timeline-date">
+						<h3>Dates</h3>
+					</div>
+				</div>
+			
+				<p class="timeline-position">Title</p>
+			
+				<ul>
+					<li>
+						Item 1
+					</li>
+					<li>
+						Item 2
+					</li>
+					<li>
+						Item 3
+					</li>
+				</ul>
+			
+				<hr />
+				<p>Example deliverables</p>
+				<a href="#first" class="button primary action small smooth-scroll-middle">Get Started</a>
+				<a href="#first" class="button primary action small smooth-scroll-middle">Get Started</a>
+				<a href="#first" class="button primary action small smooth-scroll-middle">Get Started</a>
+			</div>
+
+			<!-- Timeline item-->
+			<div class="timeline-card">
+				<div class="timeline-heading">
+					<div class="timeline-employer">
+						<h3>Employer</h3>
+					</div>
+					<div class="timeline-date">
+						<h3>Dates</h3>
+					</div>
+				</div>
+			
+				<p class="timeline-position">Title</p>
+			
+				<ul>
+					<li>
+						Item 1
+					</li>
+					<li>
+						Item 2
+					</li>
+					<li>
+						Item 3
+					</li>
+				</ul>
+			
+				<hr />
+				<p>Example deliverables</p>
+				<a href="#first" class="button primary action small smooth-scroll-middle">Get Started</a>
+				<a href="#first" class="button primary action small smooth-scroll-middle">Get Started</a>
+				<a href="#first" class="button primary action small smooth-scroll-middle">Get Started</a>
+			</div>
+
+		</div>
+	
+		<!-- Timeline -->
+		<div class="timeline-wrapper">
+		
+			<h2>Education</h2>
+		
+			<!-- Timeline item-->
+			<div class="timeline-card">
+				<div class="timeline-heading">
+					<div class="timeline-employer">
+						<h3>S.U.N.Y. University at Buffalo</h3>
+					</div>
+					<div class="timeline-date">
+						<h3>2016</h3>
+					</div>
+				</div>
+			
+				<p class="timeline-position">Doctor of philosophy (Ph.D.), Geography</p>
+			
+				<ul>
+					<li>
+						Item 1
+					</li>
+					<li>
+						Item 2
+					</li>
+					<li>
+						Item 3
+					</li>
+				</ul>
+			
+				<hr />
+				<p>Example deliverables</p>
+				<a href="#first" class="button primary action small smooth-scroll-middle">Get Started</a>
+				<a href="https://www.proquest.com/openview/72b66d43f4835c738f3c53bb81d1c4fd/1?pq-origsite=gscholar&cbl=18750" class="button primary action small smooth-scroll-middle">Download my dissertation</a>
+				<a href="#first" class="button primary action small smooth-scroll-middle">Get Started</a>
+			</div>
+
+			<!-- Timeline item-->
+			<div class="timeline-card">
+				<div class="timeline-heading">
+					<div class="timeline-employer">
+						<h3>S.U.N.Y. College of Environmental Science and Forestry</h3>
+					</div>
+					<div class="timeline-date">
+						<h3>2006</h3>
+					</div>
+				</div>
+			
+				<p class="timeline-position">Bachelor of Science (B.S.), Environmental and Forest Biology</p>
+				<hr />
+			</div>
+
+		</div>
+
+
+	</body>
+</html>
