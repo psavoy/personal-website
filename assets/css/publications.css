@@ -1,46 +1,48 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
 
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Vollkorn */
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
 /* ========== BASIC STYLING ========== */
 /* nord colors */
 :root {
-	--polar-night0: #242933;
-	--polar-night1: #2e3440;
-	--polar-night2: #3b4252;
-	--polar-night3: #434c5e;
-	--polar-night4: #4c566a;
-	--snow-storm1: #d8dee9;
-	--snow-storm2: #e5e9f0;
-	--snow-storm3: #eceff4;
-	--frost1: #8fbcbb;
-	--frost2: #88c0d0;
-	--frost3: #81a1c1;
-	--frost4: #5e81ac;
-	--aurora1: #bf616a;
-	--aurora2: #d08770;
-	--aurora3: #ebcb8b;
-	--aurora4: #a3be8c;
-	--aurora5: #b48ead;
+	--pal-text: #22333a;
+	/* 60% */
+	--pal-background: #dde5e0;
+	--pal-background-shade: #B3C5BA;
+	/* 30% */
+	--pal-primary: #b1c5a6;
+	/* 10% */
+	--pal-secondary: #5fc8d3;
+	--pal-accent: #e2c997;
 
-	--base-color: var(--snow-storm1);
-	--base-variant: var(--snow-storm3);
-	--text-color: var(--polar-night4);
-	--secondary-text: var(--polar-night1);
-	--primary-color: red;
-	--accent-color: var(--frost4);
-	--sidebar-color: rgb(143, 188, 187, 0.75)
+	/* --sidebar-color: rgb(143, 188, 187, 0.75); */
 }
 
+
+/* 		--base-color: var(--snow-storm1);
+		--base-variant: var(--snow-storm3);
+		--text-color: var(--polar-night3);
+		--secondary-text: var(--polar-night1);
+		--accent-color: var(--frost4);
+		--sidebar-color: rgb(143, 188, 187, 0.75);
+		--navbar-color: var(--snow-storm3) */
 
 /* ========== NAVBAR AND MENU ========== */
 /* nav bar */
 nav {
 	position: fixed;
+	top: 0;
 	width: 100%;
 	z-index: 100;
-	background-color: var(--base-variant);
+	height: 50px;
+	background-color: var(--pal-background);
 	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-	height: 2.2rem;
+	/* height: 2.2rem; */
 }
 
 /* styles for ul */
@@ -65,13 +67,12 @@ nav a {
 	/* remove default underline */
 	display: flex;
 	align-items: center;
-	color: var(--text-color);
+	color: var(--pal-text);
 }
 
 /* hover over link */
 nav a:hover {
-	background-color: var(--base-color);
-	height: 2.2rem;
+	background-color: var(--pal-primary);
 }
 
 /* aligning the home link to the left */
@@ -88,7 +89,7 @@ nav li:first-child {
 	right: 0;
 	height: 100vh;
 	width: 250px;
-	background-color: var(--sidebar-color);
+	background-color: var(--pal-background);
 	/* backdrop-filter: blur(12px); */
 	box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
 	list-style: none;
@@ -96,7 +97,7 @@ nav li:first-child {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-start;
-	fill: var(--text-color);
+	fill: var(--pal-text);
 	/* change color of "x" to close menu */
 }
 
@@ -110,7 +111,7 @@ nav li:first-child {
 
 .menu-button {
 	display: none;
-	fill: var(--text-color);
+	fill: var(--pal-text);
 	/* change fill of hamburger menu */
 }
 
@@ -134,19 +135,23 @@ nav li:first-child {
 /* ========== THEME SWITCHING ========== */
 /* dark mode variant colors */
 .darkmode {
-	--base-color: var(--polar-night0);
-	--base-variant: var(--polar-night3);
-	--text-color: var(--snow-storm3);
-	--secondary-text: var(--snow-storm1);
-	--primary-color: red;
-	--accent-color: var(--aurora2);
-	--sidebar-color: rgb(36, 41, 51, 0.75)
+	--pal-text: #eceff4;
+	/* 60% */
+	--pal-background: #2f3541;
+	--pal-background-shade: #1C2027;
+	/* 30% */
+	--pal-primary: #5fc8d3;
+	/* 10% */
+	--pal-secondary: #b1c5a6;
+	--pal-accent: #ebca89;
+
+	/* --sidebar-color: rgb(36, 41, 51, 0.75); */
 }
 
 /* theme switch */
 #theme-switch {
-	height: 50px;
-	width: 50px;
+	height: 35px;
+	width: 35px;
 	padding: 0;
 	border: none;
 	background: none;
@@ -156,7 +161,7 @@ nav li:first-child {
 }
 
 #theme-switch svg {
-	fill: var(--text-color)
+	fill: var(--pal-text)
 }
 
 /* hide sun icon when in light mode */
@@ -174,115 +179,191 @@ nav li:first-child {
 }
 
 /* ========== TIMELINE ========== */
-/* timeline */
-.timeline {
-	margin: 2em auto;
-	max-width: 75ch;
+:root {
+	--stack-padding-top: 100px;
 }
 
-/* content within timeline item */
-.checkpoint {
-	/* max-width: 35em; */
-	padding-top: 2em;
-	padding-bottom: 2em;
-	position: relative;
+.timeline-wrapper {
+	margin-top: 100px;
+	padding-top: 150px;
+	padding-bottom: 0px;
+	max-width: 100ch;
+	margin: 0 auto;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+		Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-/* container styling */
-.checkpoint div {
-	border: 2px solid var(--text-color);
-	border-radius: 1em;
-	padding: 1.5em;
+/* timeline card */
+.timeline-card {
+	top: 30px;
+	position: sticky;
+	border: 1px solid var(--pal-background);
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+	background-color: var(--pal-background);
+	color: var(--pal-text);
+	padding: 40px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+
+	h2 {
+		padding: 0;
+	}
 }
 
-/* timeline item paragraph sytling */
-.checkpoint p {
-	line-height: 27px;
-	color: var(--text-color)
+/* container for employer & date */
+.timeline-heading {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: -1.25rem;
 }
 
-.checkpoint ul {
-	font-size: 0.65rem;
-	line-height: 27px;
-	color: var(--text-color)
+/* separate formatting for components of the timeline card */
+.timeline-employer {
+	align-self: flex-start;
+	margin-right: auto;
 }
 
-/* align timeline items to right/left of timeline. I did all right */
-.checkpoint:nth-child(odd) {
-	border-left: 3px solid var(--text-color);
-	padding-left: 3em;
+.timeline-date {
+	align-self: flex-end;
 }
 
-.checkpoint:nth-child(even) {
-	border-left: 3px solid var(--text-color);
-	padding-left: 3em;
+.timeline-position {
+	font-size: 1.25rem;
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: -0.1rem;
 }
 
-/* add lines connected to timeline */
-.checkpoint:nth-child(odd)::before, 
-.checkpoint:nth-child(even)::before {
-	content: '';
-	background: var(--text-color);
-	width: 3em;
-	height: 3px;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%)
+/* unstructured list formatting within timeline card */
+.timeline-card ul {
+	font-size: 0.75rem;
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
-/* adjust line position, could be simplified */
-.checkpoint:nth-child(odd)::before,
-.checkpoint:nth-child(even)::before {
-	left: 0;
+/* paragraph formatting within timeline card */
+.timeline-card p {
+	font-size: 1rem;
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
-/* add points on timeline */
-.checkpoint:nth-child(odd) div::before,
-.checkpoint:nth-child(even) div::before {
-	content: '';
-	background: #fff;
-	box-shadow: 0 0 0.5em #0d71fc;
-	width: 0.8em;
-	height: 0.8em;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	border-radius: 50%;
+.timeline-card hr {
+		margin-bottom: 0;
+			margin-top: 1rem;
 }
 
-/* adjust timeline points, could be simplified */
-.checkpoint:nth-child(odd) div::before,
-.checkpoint:nth-child(even) div::before {
-	left: -0.5em
-}
-
-/* make responsive */
-@media screen and (max-width: 1150px) {
-	.timeline {
-		width: 80vw;
+/* wrap animation in a media query for those that don't want to see the motion */
+@media (prefers-reduced-motion: no-preference) {
+	.timeline-card {
+		animation: timeline-stack;
+		animation-timeline: view(auto calc(100% - var(--stack-padding-top)));
 	}
 
-	.timeline .checkpoint {
+	@keyframes timeline-stack {
+		to {
+			filter: blur(20px);
+			transform: scale(0.5);
+		}
+	}
+}
+
+@for $i from 1 through 8 {
+	.timeline-card:nth-child(#{$i}n) {
+		top: $i * 20px;
+	}
+}
+
+/* ========== PUBLICATIONS ========== */
+/* container for image and text */
+.publication-entry {
+	display: flex;
+	align-items: flex-start; /* alignment vertically */
+	border: 1px solid var(--pal-text);
+}
+
+.publication-entry.background {
+	background-color: var(--pal-background);
+}
+
+.publication-entry.shade {
+	background-color: var(--pal-background-shade);
+}
+
+/* format for thumbnail picture */
+.publication-entry img {
+	width: 35%;
+	height: 100%;
+	align-self: center;
+	min-width: 25rem;
+}
+
+
+/* publication information */
+.publication-info {
+	padding: 2rem 7rem 2rem 7rem; /*top, right, bottom, left*/
+	background-color: red;	
+	width: 65%;
+	height: 100%;
+}
+
+/* heading formatting within publication entry */
+.publication-info h3 {
+	font-size: 1.5rem;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+/* authors */
+.publication-authors {
+	font-size: 1rem;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+/* journal info */
+.publication-journal {
+	font-size: 1rem;
+	margin-bottom: 0;
+	margin-top: 0;
+	opacity: 50%;
+}
+
+/* paragraph formatting within publication entry */
+/* .publication-info p {
+	font-size: 1rem;
+	margin-bottom: 0;
+	margin-top: 0;
+} */
+
+/* summary text */
+.publication-summary {
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+@media screen and (max-width: 980px) {
+
+	.publication-entry {
+		padding: 3.75rem 3rem 1.75rem 3rem;
+		width: auto;
+		min-width: 0;
+		flex-direction: column;
+		align-content: center;
+	}
+
+	.publication-info {
+		padding: 1.5rem 5rem 1.5rem 5rem; /*top, right, bottom, left*/
+		background-color: red;
 		width: 100%;
-		transform: none;
-		padding-left: 0;
-		padding-right: 0;
-		border: none;
+		height: 100%;
 	}
 
-	.timeline .checkpoint::before {
-		width: 3px;
-		height: 4em;
-		top: -2em;
-		left: 50%;
-		transform: translateX(-50%);
+	.publication-entry img {
+		width: 100%;
+		justify-self: unset;
 	}
 
-	.timeline .checkpoint div::before {
-		top: -0.5em;
-		left: 50%;
-		transform: translateX(-50%);
-	}
 }
 
 /* ========== STORY BY HTML5 UP STYLING ========== */
@@ -316,6 +397,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	padding-top: 70px; /*ps*/
 }
 
 ol, ul {
@@ -437,12 +519,12 @@ input, select, textarea {
 		}
 
 	body {
-		background-color: var(--base-color);
-		color: var(--text-color);
+		background-color: var(--pal-background);
+		color: var(--pal-text);
 	}
 
 	body, input, select, textarea {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: Poppins, Helvetica, sans-serif; /*"Source Sans Pro", Helvetica, sans-serif;*/ /*ps*/
 		font-size: 1rem;
 		font-weight: 300;
 		line-height: 1.65;
@@ -481,6 +563,7 @@ input, select, textarea {
 		line-height: 1.375;
 		letter-spacing: -0.05em;
 		margin: 0 0 1rem 0;
+		font-family: Vollkorn; /*ps*/
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -608,16 +691,16 @@ input, select, textarea {
 		color: #000000;
 	}
 
-		a:hover {
-			color: #47D3E5;
-		}
+		/* a:hover {
+			color: var(--pal-primary);
+		} */
 
 	strong, b {
 		color: #000000;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: var(--text-color);
+		color: var(--pal-text);
 	}
 
 	blockquote {
@@ -2472,8 +2555,8 @@ input, select, textarea {
 	button,
 	.button {
 		background-color: transparent;
-		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
-		color: #000000 !important;
+		box-shadow: inset 0 0 0 1px var(--pal-text);
+		color: var(--pal-text) !important;
 	}
 
 		input[type="submit"]:hover,
@@ -2481,8 +2564,8 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 1px var(--accent-color); /* modify the border on hollow buttons */
-			color: var(--accent-color) !important; /* modify button hover color */
+			box-shadow: inset 0 0 0 1px brightness(125%); /* modify the border on hollow buttons */
+			filter: brightness(25%); /* Also added .button:hover, *ps*/
 		}
 
 		input[type="submit"]:active,
@@ -2490,9 +2573,7 @@ input, select, textarea {
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: rgba(71, 211, 229, 0.2);
-			box-shadow: inset 0 0 0 1px var(--accent-color);
-			color: var(--accent-color) !important;
+			box-shadow: inset 0 0 0 1px brightness(75%); /*ps*/
 		}
 
 		input[type="submit"].primary,
@@ -2500,25 +2581,60 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #000000;
+			background-color: var(--pal-primary); /*ps*/
 			box-shadow: none;
-			color: var(--text-color) !important; /* modify button text color */
+			color: var(--pal-text) !important; /*ps*/
 		}
+
+		/* Adding additional color variants for primary buttons *ps*/
+		.button.pal-background {
+			background-color: var(--pal-background); /*ps*/
+			box-shadow: none;
+			color: var(--pal-text) !important; /* modify button text color */
+		}
+
+		.button.pal-background-variant {
+			background-color: var(--pal-background-variant); /*ps*/
+			box-shadow: none;
+			color: var(--pal-text) !important; /* modify button text color */
+		}
+
+		.button.pal-primary {
+			background-color: var(--pal-primary); /*ps*/
+			box-shadow: none;
+			color: var(--pal-text) !important; /* modify button text color */
+		}
+
+		.button.pal-secondary {
+			background-color: var(--pal-secondary); /*ps*/
+			box-shadow: none;
+			color: var(--pal-text) !important; /* modify button text color */
+		}
+
+		.button.pal-accent {
+			background-color: var(--pal-accent); /*ps*/
+			box-shadow: none;
+			color: var(--pal-text) !important; /* modify button text color */
+		}
+
+		/* end *ps*/
 
 			input[type="submit"].primary:hover,
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
 			button.primary:hover,
+			.button:hover,
 			.button.primary:hover {
-				background-color: #47D3E5;
+				filter: brightness(125%); /* Also added .button:hover, *ps*/
 			}
 
 			input[type="submit"].primary:active,
 			input[type="reset"].primary:active,
 			input[type="button"].primary:active,
 			button.primary:active,
+			.button:active,
 			.button.primary:active {
-				background-color: #1ebdd1;
+				filter: brightness(75%); /* Also added .button:active, *ps*/
 			}
 
 /* Form */
@@ -4636,7 +4752,7 @@ input, select, textarea {
 		}
 
 		.banner.style5.fullscreen {
-			min-height: 100vh;
+			min-height: 75vh; /* make a little shorter when fullscreen *ps*/
 		}
 
 		.banner.style5.content-align-left {
@@ -8844,32 +8960,32 @@ input, select, textarea {
 			}
 
 		#wrapper > .color1 {
-			background-color: #30363d;
+			background-color: var(--pal-background-shade);
 		}
 
 		#wrapper > .color2 {
-			background-color: #db8992;
+			background-color: var(--pal-background);
 		}
 
 		#wrapper > .color3 {
-			background-color: #ab7aad;
+			background-color: var(--pal-primary);
 		}
 
 		#wrapper > .color4 {
-			background-color: #897cad;
+			background-color: var(--pal-secondary);
 		}
 
 		#wrapper > .color5 {
-			background-color: #7794ce;
+			background-color: var(--pal-accent);
 		}
 
-		#wrapper > .color6 {
+/* 		#wrapper > .color6 {
 			background-color: #64abb4;
 		}
 
 		#wrapper > .color7 {
 			background-color: #6ba78c;
-		}
+		} */
 
 		#wrapper.divided > * {
 			box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.075);
@@ -8886,3 +9002,4 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
