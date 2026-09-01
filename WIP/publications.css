@@ -302,7 +302,7 @@ nav li:first-child {
 /* publication information */
 .publication-info {
 	padding: 2rem 7rem 2rem 7rem; /*top, right, bottom, left*/
-	background-color: red;	
+	/* background-color: red;	 */
 	width: 65%;
 	height: 100%;
 }
@@ -354,7 +354,6 @@ nav li:first-child {
 
 	.publication-info {
 		padding: 1.5rem 5rem 1.5rem 5rem; /*top, right, bottom, left*/
-		background-color: red;
 		width: 100%;
 		height: 100%;
 	}

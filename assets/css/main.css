@@ -19,18 +19,7 @@
 	/* 10% */
 	--pal-secondary: #5fc8d3;
 	--pal-accent: #e2c997;
-
-	/* --sidebar-color: rgb(143, 188, 187, 0.75); */
 }
-
-
-/* 		--base-color: var(--snow-storm1);
-		--base-variant: var(--snow-storm3);
-		--text-color: var(--polar-night3);
-		--secondary-text: var(--polar-night1);
-		--accent-color: var(--frost4);
-		--sidebar-color: rgb(143, 188, 187, 0.75);
-		--navbar-color: var(--snow-storm3) */
 
 /* ========== NAVBAR AND MENU ========== */
 /* nav bar */
@@ -274,6 +263,115 @@ nav li:first-child {
 	}
 }
 
+/* ========== PUBLICATIONS ========== */
+/* formatting for references */
+#indent {
+	text-indent: -25px;
+	margin-left: 75px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+/* format to color my name */
+#indent b{
+	color: var(--pal-primary);
+}
+
+/* just to make it easier to space between entries */
+.citation-center {
+	margin-bottom: 1.5rem;
+	margin-top: 0;
+}
+
+/* === Styling for highlight publications === */
+/* container for publication links */
+.citation-links {
+	margin-left: 75px;
+	display: flex;
+	gap: 1em;
+}
+
+/* container for image and text */
+.publication-entry {
+	display: flex;
+	align-items: flex-start; /* alignment vertically */
+	border: 1px solid var(--pal-text);
+}
+
+.publication-entry.background {
+	background-color: var(--pal-background);
+}
+
+.publication-entry.shade {
+	background-color: var(--pal-background-shade);
+}
+
+/* format for thumbnail picture */
+.publication-entry img {
+	width: 35%;
+	height: 100%;
+	align-self: center;
+	min-width: 25rem;
+}
+
+/* publication information */
+.publication-info {
+	padding: 2rem 7rem 2rem 7rem; /*top, right, bottom, left*/
+	/* background-color: red;	 */
+	width: 65%;
+	height: 100%;
+}
+
+/* heading formatting within publication entry */
+.publication-info h3 {
+	font-size: 1.5rem;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+/* authors */
+.publication-authors {
+	font-size: 1rem;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+/* journal info */
+.publication-journal {
+	font-size: 1rem;
+	margin-bottom: 0;
+	margin-top: 0;
+	opacity: 50%;
+}
+
+/* summary text */
+.publication-summary {
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+/* reformat highlight publications for smaller screens */
+@media screen and (max-width: 980px) {
+	.publication-entry {
+		padding: 3.75rem 3rem 1.75rem 3rem;
+		width: auto;
+		min-width: 0;
+		flex-direction: column;
+		align-content: center;
+	}
+
+	.publication-info {
+		padding: 1.5rem 5rem 1.5rem 5rem; /*top, right, bottom, left*/
+		width: 100%;
+		height: 100%;
+	}
+
+	.publication-entry img {
+		width: 100%;
+		justify-self: unset;
+	}
+
+}
 
 /* ========== STORY BY HTML5 UP STYLING ========== */
 /*
