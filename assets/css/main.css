@@ -558,7 +558,7 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2rem 0;
+		margin: 0 0 1.5rem 0; /* reduce spacing between paragraphs *ps*/
 	}
 
 		p.major {
@@ -669,7 +669,7 @@ input, select, textarea {
 	@media screen and (max-width: 736px) {
 
 		p.major {
-			font-size: 1.1rem;
+			font-size: 1.rem;
 		}
 
 		h1 {
@@ -2990,6 +2990,11 @@ input, select, textarea {
 			font-weight: 900;
 		}
 
+		/* add theme switching for brand icons *ps*/
+		.icon.brands {
+			color: var(--pal-text);
+		}
+
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
 		}
@@ -3297,6 +3302,7 @@ input, select, textarea {
 			ul.icons li:last-child {
 				padding-right: 0;
 			}
+
 
 /* Section/Article */
 
@@ -4705,7 +4711,7 @@ input, select, textarea {
 			top: 0;
 			left: 0;
 			border-radius: 0;
-			opacity: 0.5;
+			opacity: 0.5; /* modify from default 0.5 if needed *ps*/
 		}
 
 			.banner.style5 .image img {
@@ -7288,7 +7294,7 @@ input, select, textarea {
 
 				.gallery.style2 article .image img {
 					display: block;
-					width: 100%;
+					width: 100%; 
 					border-radius: 0;
 				}
 
@@ -8571,15 +8577,15 @@ input, select, textarea {
 		}
 
 	.items.style1 > * {
-		border-color: rgba(0, 0, 0, 0.2);
+		border-color: var(--pal-text); /*ps*/
 	}
 
 	.items.style2 {
-		border-color: rgba(0, 0, 0, 0.2);
+		border-color: var(--pal-text); /*ps*/
 	}
 
 		.items.style2 > * {
-			border-color: rgba(0, 0, 0, 0.2);
+			border-color: var(--pal-text); /*ps*/
 		}
 
 /* Index */
