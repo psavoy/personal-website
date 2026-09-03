@@ -264,12 +264,9 @@ nav li:first-child {
 }
 
 /* ========== FEATURED PUBLICATIONS ========== */
-/* container for multiple featured publications */
 .featured-publications {
 	display:flex;
 	width: 100%;
-	gap: 1em;
-	padding: 0rem 5rem 5rem 5rem; /*top, right, bottom, left*/
 }
 
 /* container for image and text */
@@ -282,32 +279,25 @@ nav li:first-child {
 	min-width: 0;
 	flex-direction: column;
 	align-content: center;
-	border-radius: 4px;
 }
 
 /* featured publication information */
 .featured-publication-info {
-	padding: 0rem 0.5rem 0rem 0.5rem; /*top, right, bottom, left*/
+	padding: 1rem 0.5rem 1rem 0.5rem; /*top, right, bottom, left*/
 	width: 100%;
 	height: 100%;
 }
 	
-.featured-publication-info p {
-	font-size: 0.7rem;
-}
-
-.featured-publication-info h3 {
-	font-size: 1.25rem;
-}
-
 /* format for thumbnail picture */
 .featured-publication-entry img {
 	padding: 1rem 0.5rem 1rem 0.5rem;
+	width: 50%;
+	height: 50%;
 	align-self: center;
+	min-width: 25rem;
 	justify-self: unset;
-	max-width: 100%;
 }
-
+	
 /* reformat highlight publications for smaller screens */
 @media screen and (max-width: 980px) {
 	.featured-publications {
