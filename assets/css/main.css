@@ -167,6 +167,13 @@ nav li:first-child {
 	display: block;
 }
 
+/* ========== IMAGE OVERLAY ========== */
+/* image overlay to help font readability */
+.overlay {
+	border-image-source: linear-gradient(var(--pal-background), var(--pal-background));
+	border-image-slice: fill 1;
+}
+
 /* ========== TIMELINE ========== */
 :root {
 	--stack-padding-top: 100px;
@@ -625,7 +632,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
 		line-height: 1.375;
-		letter-spacing: -0.05em;
+		letter-spacing: em; /* adjustted back to 0 *ps*/
 		margin: 0 0 1rem 0;
 		font-family: Vollkorn; /*ps*/
 	}
