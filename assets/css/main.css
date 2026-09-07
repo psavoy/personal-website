@@ -15,10 +15,10 @@
 	--pal-background: #dde5e0;
 	--pal-background-shade: #B3C5BA;
 	/* 30% */
-	--pal-primary: #b1c5a6;
+	--pal-primary: #82c2e2;
 	/* 10% */
-	--pal-secondary: #5fc8d3;
-	--pal-accent: #e2c997;
+	--pal-secondary: #b1c5a6;
+	--pal-accent: #121e49;
 }
 
 /* ========== NAVBAR AND MENU ========== */
@@ -129,7 +129,7 @@ nav li:first-child {
 	--pal-background: #2f3541;
 	--pal-background-shade: #1C2027;
 	/* 30% */
-	--pal-primary: #5fc8d3;
+	--pal-primary: #5eb0d3;
 	/* 10% */
 	--pal-secondary: #b1c5a6;
 	--pal-accent: #ebca89;
