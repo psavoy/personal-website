@@ -441,6 +441,286 @@ nav li:first-child {
 
 }
 
+/* ========== FIGURE GALLERY ========== */
+img {
+	max-inline-size: 100%;
+}
+
+/* Figure gallery wrapper */
+.dataviz-gallery-wrapper {
+	background: var(--pal-background-shade);
+
+	/* Use whichever works best for you */
+	min-block-size: 100vh;
+	/* min-block-size: 100dvh; */
+	/* min-block-size: 100svh; */
+	padding: 0rem 4rem 0rem 4rem; /*top, right, bottom, left*/
+}
+
+/* This may be unnessecary */
+.dataviz-gallery-container {
+	grid-column: main;
+	padding: 1.25rem;
+}
+
+/* Figure Gallery Grid */
+.dataviz-gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+	/* grid-auto-rows: 6rem;  */
+	/* grid-auto-columns: 12.5rem; */
+	grid-auto-flow: dense;
+	gap: 1.25rem;
+}
+
+/* .dataviz-gallery figure {
+	container: figure / inline-size;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-rows: minmax(0, 1fr);
+} */
+
+.dataviz-gallery img {
+/* 	inline-size: 100%;
+	block-size: 100%; */
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	grid-area: 1 / 1 / -1 / -1;
+	transition: scale 1s ease-in-out;
+	border-radius: 4px;
+}
+
+.dataviz-image {
+	position: relative;
+	object-fit: cover;
+	align-items: center;
+}
+
+/* Bento image grid sizes */
+.dataviz-image.w1-h1{
+  grid-area: span 1 / span 1;
+}
+
+.dataviz-image.w2-h1 {
+  grid-column: span 2;
+}
+
+.dataviz-image.w1-h2 {
+  grid-row: span 2; 
+}
+
+.dataviz-image.w2-h2 {
+  grid-area: span 2 / span 2;
+}
+
+/*  Figure gallery image caption */
+.dataviz-caption {
+	grid-area: 1 / 1 / -1 / -1;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+	opacity: 0;
+	font-size: 0.8rem;
+	-moz-transition: opacity 0.2s ease-in-out;
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-ms-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+/* Figure gallery image caption text styling */
+.dataviz-caption h3 {
+	font-size: 1rem;
+	margin-bottom: 0.25rem;
+	color: #fff;
+}
+
+.dataviz-caption p {
+	margin-left: 0rem;
+	margin-right: 0rem;
+	color: #fff;
+	line-height: 1rem;
+}
+
+/* Display image caption on hover */
+.dataviz-caption:hover {
+	opacity: 1;
+}
+
+/* "button" */
+.dataviz-more {
+	border: 0;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 400;
+	letter-spacing: 0.125em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+	max-width: 20rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: 0.6rem;
+	height: 3.325em;
+	min-height: 3.325em;
+	line-height: 3.325em;
+	border-radius: 3.325em;
+	padding: 0 2em;
+	box-shadow: inset 0 0 0 1px #fff;
+	color: #fff;
+}
+
+/* media queries */
+/* improve on this at a future date */
+@media screen and (max-width: 1280px) {
+	/* Reduce padding */
+	.dataviz-gallery-wrapper {
+		padding: 0rem 2rem 0rem 2rem; /*top, right, bottom, left*/
+	}
+}
+
+@media screen and (max-width: 992px) {
+	/* Reduce padding */
+	.dataviz-gallery-wrapper {
+		padding: 0rem 2rem 0rem 2rem; /*top, right, bottom, left*/
+	}
+
+	/* Modify grid layout */
+	.dataviz-gallery {
+		grid-template-columns: 1fr;
+    grid-template-rows: auto;
+	}
+	
+	/* Reset grid-columns */
+	.dataviz-image.w1-h1{
+		grid-area: auto;
+	}
+
+	.dataviz-image.w2-h1 {
+		grid-column: auto;
+	}
+
+	.dataviz-image.w1-h2 {
+		grid-row: auto;
+	}
+
+	.dataviz-image.w2-h2 {
+		grid-area: auto;
+	}
+}
+
+/* ========== FIGURE GALLERY MODALS ========== */
+/* .dataviz-gallery-container img {
+	height: 25rem;
+} */
+
+/* modal */
+.dataviz-modal {
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-height: 100vh;
+	width: 100%;
+	background: rgba(0, 0, 0, .8);
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+/* modal card */
+.dataviz-modal .modal-content {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	background: var(--pal-background);
+	position: relative;
+	margin: 2rem;
+	width: 30rem;
+	border-radius: 4px;
+	max-height: 100vh;
+	overflow-y: scroll;
+}
+
+.dataviz-modal .modal-content.active {
+	display: inline-block;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+/* Prevent scrolling when modal is open, added and removed by JS */
+.modal-open {
+	overflow-y: hidden;
+}
+
+/* Image in modal card styling */
+.dataviz-modal .modal-content img {
+	width: auto;
+	padding: 1rem;
+	align-self: center;
+	/* height: 30rem; */
+	/* box-shadow: 0 0 0 1px black; */
+	filter: drop-shadow(rgba(0, 0, 0, 0.5) 0.25rem 0.25rem 4px);
+}
+
+/* Modal horizontal rule styling */
+.dataviz-modal .modal-content hr {
+	margin-bottom: 1rem;
+	margin-top: 0rem;
+	border-color: var(--pal-text);
+ 	border: 1;
+
+}
+
+/* x to close window */
+.dataviz-modal .modal-content .fa-times {
+	position: absolute;
+	top: 1rem;
+	right: 1.5rem;
+	cursor: pointer;
+	color: var(--pal-text);
+	font-size: 0.8rem;
+}
+
+/* hover effect for x to close window */
+.dataviz-modal .modal-content .fa-times:hover {
+	transform: rotate(90deg);
+}
+
+/* Adjust heading styles for modal content */
+.dataviz-modal .modal-content h3 {
+	margin-bottom: -0.1rem;
+} 
+
+.dataviz-modal .modal-content h5 {
+	margin-bottom: 0rem;
+	text-align: left;
+} 
+
+/* Modal paragraph styling */
+.dataviz-modal .modal-content p {
+	line-height: 1.5;
+
+	font-size: 0.8rem;
+	color: var(--pal-text);
+	text-align: left;
+	margin-bottom: 1rem;
+}
+
+
 /* ========== STORY BY HTML5 UP STYLING ========== */
 /*
 	Story by HTML5 UP
@@ -473,6 +753,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	padding-top: 50px; /* account for navbar *ps*/
+	
 }
 
 ol, ul {
@@ -534,6 +815,7 @@ input, select, textarea {
 
 	html {
 		box-sizing: border-box;
+		scrollbar-gutter: stable; /* Keep content position stable when removing scrollbar *ps*/
 	}
 
 	*, *:before, *:after {
@@ -774,7 +1056,7 @@ input, select, textarea {
 	}
 
 	a {
-		color: #000000;
+		color: var(--pal-accent); /*ps*/
 	}
 
 		/* a:hover {
@@ -786,7 +1068,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: var(--pal-text);
+		color: var(--pal-text); /*ps*/
 	}
 
 	blockquote {

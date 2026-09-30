@@ -1,0 +1,178 @@
+				<!-- ======================= MODAL SECTION ======================= -->
+					<div class="dataviz-modal">
+						<!-- Light limitation map -->
+							<div class="modal-content" data-target="light-limitation">
+								<i class="fas fa-times"></i>
+								<img src="images/dataviz/light_limitation_map.png" alt="">
+								<h3>River Light Constraints</h3>
+								<p>
+									The conversion of solar energy to chemical energy by primary producers is a fundamental piece of carbon cycling and
+									energy flow within ecosystems, but river autotrophs often only receive a small fraction of incoming sunlight. Lighting
+									conditions within rivers are influenced by many factors including the size and shape of the river itself, surrounding
+									riparian zones, and changing water conditions.
+								</p>
+								
+								<p>
+									A few years ago, I designed a model predict light available for river primary producers and used the model to infer
+									whether productivity was most limited by riparian zones or water column processes for over 2 million reaches in the
+									US.
+									We found that water column processes most limited productivity for 50% of the nation’s river length and 80% of its
+									surface area. At the time we found some variations across the country that appeared to be driven by forest cover, but
+									I
+									thought it would be interesting to visualize predictions using national hydrography flowlines. This was a fun exercise
+									to revisit some old work and look at it in a new way.
+								</p>
+								
+								<p>
+									If you are interested in learning more about this model or our results, you can find our paper
+									<a href="https://doi.org/10.1029/2020GL092149">here</a>.
+								</p>
+							</div>
+					
+						<!-- Metabolism circular stats -->
+							<div class="modal-content" data-target="metabolism-circular">
+								<i class="fas fa-times"></i>
+								<img src="images/dataviz/metabolism-circular-gallery.png" alt="">
+								<h3>Timing and variance of stream metabolism</h3>
+
+								<p>
+									River ecosystem metabolism is useful for understanding energetics and carbon cycling in flowing waters. 
+									Net ecosystem production (NEP) provides information on whether a river is autotrophic (NEP > 0) or heterotrophic (NEP < 0) 
+									and carbon dynamics within the ecosystem. Are there any consistent patterns in the timing of autotrophy or heterotrophy?
+								</p>
+
+								<p>
+									I used circular statistics to calculate the mean timing of days with positive or negative NEP for a few hundred rivers. 
+                  Additionally, the coherence (or dispersion) was also calculated to see if the timing of these events was concentrated in
+                   a specific time of year for each site.
+								</p>
+								
+                <p>
+                  A total of 44% of sites had a mean timing of autotrophy in summer and another 38% in spring. By contrast, 40% of sites 
+                  had a mean timing of heterotrophy in summer and 37% in autumn. While summer has high percentages of both autotrophy and 
+                  heterotrophy, it appears that positive NEP is more likely to happen in the spring and negative NEP in the autumn. 
+                  This is a simple conclusion in agreement with conceptual understanding of biogeochemical cycling, but useful to see it 
+                  so clearly highlighted in the data.
+                </p>
+							</div>
+
+						<!-- USGS monitoring ternary plot -->
+							<div class="modal-content" data-target="usgs-ternary">
+								<i class="fas fa-times"></i>
+								<img src="images/dataviz/monitoring-ternary.jpg" alt="">
+								<h3>organic onions</h3>
+
+                <p>
+                  I looked at all active CONUS NWIS sites in 2024 that were recording common water quality measures
+                  (discharge, dissolved oxygen, specific conductance, turbidity, water temperature) to see what the
+                  surrounding land cover was. 46% of sites were situated in areas where natural land cover was the 
+                  dominant (>=60 %) class. By contrast, only 9% of sites were located where agriculture was the dominant class.
+                </p>
+
+                <p>
+                  If you are interested in a deep dive into global bias of stream gauge locations, check out 
+                  <a href="https://www.nature.com/articles/s41893-022-00873-0">Krabbenhoft et al. (2022)</a>
+                  for an excellent analysis.
+                </p>
+							</div>
+					
+            <!-- NWM timing -->
+              <div class="modal-content" data-target="nwm-timing">
+                <i class="fas fa-times"></i>
+                <img src="images/dataviz/nwm-timing-gallery.jpg" alt="">
+                <h3>Average month with highest streamflow</h3>
+                <p>
+                  Which month has the highest streamflow? I used retrospective estimates of streamflow 
+                  from the national water model for 18,495 U.S. streams spanning 1979-2020 to visualize 
+                  this question. Since modeled streamflow was used, I calculated all circular statistics 
+                  based on total monthly streamflow instead of using daily estimates.
+                </p>
+
+                <p>
+                  If you are interested in this kind of analysis using observed data, I would highly
+                  suggest reading <a href="https://www.sciencedirect.com/science/article/abs/pii/S0309170815002687?via%3Dihub">Villarini (2016)</a>.
+                </p>
+              </div>
+
+            <!-- Terrestrial phenology and stream metabolism -->
+              <div class="modal-content" data-target="phenology-metabolism">
+                <i class="fas fa-times"></i>
+                <img src="images/dataviz/phenology-metabolism.jpg" alt="">
+                <h3>Terrestrial phenology and river metabolism</h3>
+                <p>
+                  I used MODIS vegetation dynamics data to get stages of terrestrial phenological development 
+                  at each site (e.g. greenup or senescence) and determined which stage of development autotrophy 
+                  and heterotrophy occurred in.
+                </p>
+
+                <p>
+                  Autotrophy was relatively evenly distributed throughout phenological stages, with about 25% of 
+                  sites falling into each stage outside of dormancy. By contrast, 59% of sites had their mean
+                  timing of heterotrophy occur during senescence. The prevalence of heterotrophy during senescence
+                  of terrestrial vegetation could be due to inputs of organic matter in the form of leaf litterfall.
+                </p>
+
+                <p>
+                  If this topic interests you, <a href="https://aslopubs.onlinelibrary.wiley.com/doi/10.1002/lno.12207">Bertuzzo et al. (2022)</a> 
+                  has a modeling study that looks into different sources of organic matter and river ecosystem respiration rates.
+                </p>
+              </div>
+
+            <!-- Savoy GRL -->
+              <div class="modal-content" data-target="savoy-grl">
+                <i class="fas fa-times"></i>
+                <img src="images/dataviz/Savoy-GRL.jpg" alt="">
+                <h3>Modeling light limitations to river productivity</h3>
+                <p>
+                  I developed a model to predict stream lighting conditions which accounted
+                  for reductions in available light from adjacent riparian zones and within
+                  the water column.
+                </p>
+
+                <p>
+                  We used the model to predict river productivity directly from light availability
+                  and show how accounting for successive attenuation of light from multiple sources
+                  produces productivity estimates which much more closely resemble observed patterns
+                  of river productivity.
+                </p>
+              </div>
+
+            <!-- NSF Macrosystems poster -->
+              <div class="modal-content" data-target="nsf-macrosystems">
+                <i class="fas fa-times"></i>
+                <img src="images/posters/nsf_macrosystems.jpg">
+                <h3>StreamPULSE NSF macrosystems poster</h3>
+                <p>This is a poster presented for a meeting of active macrosystems projects at the NSF head office.</p>
+              </div>
+
+            <!-- AGU 2015 poster-->
+              <div class="modal-content" data-target="agu-2015">
+                <i class="fas fa-times"></i>
+                <img src="images/3.png" alt="">
+                <h3>AGU 2015 poster</h3>
+                <p>
+                  Environmental conditions and plant biology interact to produce varied seasonal 
+                  patterns of leaf development. I found a positive relationship between leaf foliar
+                  nitrogen and rates of canopy expansion. I then modeled rates of canopy expansion
+                  based only on meteorological conditions and foliar nitrogen at 17 sites 
+                  across different biomes. Modeled estimates of canopy expansion rates were
+                  very strongly correlated to observations for all 93 site-years of data.
+                </p>
+              </div>
+
+            <!-- AGU 2013 poster-->
+              <div class="modal-content" data-target="agu-2013">
+                <i class="fas fa-times"></i>
+                <img src="images/3.png" alt="">
+                <h3>AGU 2013 poster</h3>
+                <p>
+                  I modified a simple prognostic phenology model to predict the seasonality of leaf area index.
+                  The model was tested at 5 sites and modeled estimates were very strongly correlated to observations.
+                  This work showed that a simple model was able to predict the timing and magnitude of canopy phenology
+                  using only meteorological data and some basic data-driven assumptions about how temperature, light, 
+                  and water stress limit plant development.
+                </p>
+              </div>
+
+
+					</div>

@@ -1,0 +1,418 @@
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Philip Savoy</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- JS for theme switch -->
+		<script type="text/javascript" src="assets/js/darkmode.js" defer></script>
+	</head>
+
+	<!-- BODY -->
+	<body>
+		<!-- =======================  NAVBAR ======================= -->
+			<nav>
+				<!-- Mobile sidebar menu -->
+					<ul class="sidebar">
+						<li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960"
+									width="26">
+									<path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+								</svg></a></li>
+						<li><a href="bio.html">Bio</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="experience.html">Experience</a></li>
+					</ul>
+			
+				<!-- Desktop menu -->
+					<ul>
+						<li><a href="index.html">Philip Savoy</a></li>
+						<li class="hideOnMobile"><a href="bio.html">Bio</a></li>
+						<li class="hideOnMobile"><a href="products.html">Products</a></li>
+						<li class="hideOnMobile"><a href="experience.html">Experience</a></li>
+						<li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+									viewBox="0 96 960 960" width="26">
+									<path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+								</svg></a></li>
+						<button id="theme-switch">
+							<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+								<path
+									d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+								<path
+									d="M338.5-338.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+							</svg>
+						</button>
+					</ul>
+			</nav>
+
+		<!-- =======================  MAIN PAGE WRAPPER ======================= -->
+			<div id="wrapper" class="divided">
+				<!-- Page banner -->
+					<section class="banner style5 content-align-center image-position-right onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Dataviz Gallery</h1>
+						</div>
+						<div class="image">
+							<img src="images/page-banners/dataviz-banner.jpg" alt="" />
+						</div>
+					</section>
+
+				<!-- ======================= DATAVIZ GALLERY SECTION ======================= -->
+					<section class="wrapper style1 align-center">
+						<div class="dataviz-gallery-wrapper">
+							<div class="dataviz-gallery-container">
+							
+				
+								<div class="dataviz-gallery">
+									<!-- Light limitation map -->
+										<div class="dataviz-image w2-h2" data-name="light-limitation">
+											<img src="images/dataviz/light-limitation-map-gallery.png">
+											<div class="dataviz-caption">
+												<h3>River Light Limitation</h3>
+												<p>Estimates of whether riparian or water conditions most limit river light environments for over 2 million river reaches</p>
+												<span class="dataviz-more">Learn more</span>
+											</div>
+										</div>
+						
+									<!-- Metabolism circular stats -->
+										<div class="dataviz-image w2-h1" data-name="metabolism-circular">
+											<img src="images/dataviz/metabolism-circular-gallery.png" alt="Lorem ipsum dolor sit amet">
+											<div class="dataviz-caption">
+												<h3>Timing and Variance of Stream Metabolism</h3>
+												<p>The timing of river autotrophy and heterotrophy across a few hundred rivers.</p>
+												<div class="dataviz-more">Learn more</div>
+											</div>
+										</div>
+
+									<!-- USGS monitoring ternary plot -->
+										<div class="dataviz-image w1-h1" data-name="usgs-ternary">
+											<img src="images/dataviz/monitoring-ternary-gallery.jpg">
+											<div class="dataviz-caption">
+												<h3>Water Quality Sensor Placement</h3>
+												<p>Placement of USGS water quality sensors in relation to land cover.</p>
+												<span class="dataviz-more">Learn more</span>
+											</div>
+										</div>
+
+									<!-- NWM timing -->
+										<div class="dataviz-image w1-h2" data-name="nwm-timing">
+											<img src="images/dataviz/nwm-timing-gallery.jpg">
+											<div class="dataviz-caption">
+												<h3>Average Month with Highest Streamflow</h3>
+												<p>The average month where streamflow was highest for 18,495 streams and rivers.</p>
+												<span class="dataviz-more">Learn more</span>
+											</div>
+										</div>
+
+									<!-- Terrestrial phenology and stream metabolism -->
+										<div class="dataviz-image w1-h2" data-name="phenology-metabolism">
+											<img src="images/dataviz/phenology-metabolism-gallery.jpg">
+											<div class="dataviz-caption">
+												<h3>Terrestrial Phenology and River Metabolism</h3>
+												<p>The timing of river autotrophy and heterotrophy in relation to terrestrial vegetation phenology.</p>
+												<span class="dataviz-more">Learn more</span>
+											</div>
+										</div>
+
+									<!-- Savoy GRL -->
+										<div class="dataviz-image w2-h1" data-name="savoy-grl">
+											<img src="images/dataviz/Savoy-GRL.jpg">
+											<div class="dataviz-caption">
+												<h3>Modeling Light Limitations to River Productivity</h3>
+												<p>Predicting how riparian zones and water column processes limited productivity</p>
+												<span class="dataviz-more">Learn more</span>
+											</div>
+										</div>
+
+									<!-- NSF Macrosystems poster -->
+										<div class="dataviz-image w2-h1" data-name="nsf-macrosystems">
+											<img src="images/posters/nsf_macrosystems.jpg">
+											<div class="dataviz-caption">
+												<h3>StreamPULSE NSF Macrosystems Poster</h3>
+												<p>Overview of the motivation and core components of the StreamPULSE project to better understand patterns and drivers of stream metabolism.</p>
+												<span class="dataviz-more">Learn more</span>
+											</div>
+										</div>
+
+									<!-- AGU 2015 poster-->
+										<div class="dataviz-image w1-h2" data-name="agu-2015">
+											<img src="images/posters/AGU-2015.jpg">
+											<div class="dataviz-caption">
+												<h3>AGU 2015 Poster</h3>
+												<p>Predicting rates of forest canopy expansion using leaf functional traits.</p>
+												<span class="dataviz-more">Learn more</span>
+											</div>
+										</div>
+
+									<!-- AGU 2013 poster-->
+										<div class="dataviz-image w2-h1" data-name="agu-2013">
+											<img src="images/posters/AGU-2013.jpg">
+											<div class="dataviz-caption">
+												<h3>AGU 2013 Poster</h3>
+												<p>A simple semi-mechanistic model to predict forest phenology using meteorological data.</p>
+												<span class="dataviz-more">Learn more</span>
+											</div>
+										</div>
+
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- ======================= MODAL SECTION ======================= -->
+					<div class="dataviz-modal">
+						<!-- Light limitation map -->
+							<div class="modal-content" data-target="light-limitation">
+								<i class="fas fa-times"></i>
+								<h3>River Light Limitation</h3>
+								<img src="images/dataviz/light_limitation_map.png" alt="">
+								<h5>Description</h5>
+								<hr></hr>
+								<p>
+									The conversion of solar energy to chemical energy by primary producers is a fundamental piece of carbon cycling and
+									energy flow within ecosystems, but river autotrophs often only receive a small fraction of incoming sunlight. Lighting
+									conditions within rivers are influenced by many factors including the size and shape of the river itself, surrounding
+									riparian zones, and changing water conditions.
+								</p>
+								
+								<p>
+									I designed a model predict light available for river primary producers and used the model to infer
+									whether productivity was most limited by riparian zones or water column processes for over 2 million reaches in the
+									US. We found that water column processes most limited productivity for 50% of the nation’s river length and 80% of its
+									surface area.
+								</p>
+								
+								<p>
+									If you are interested in learning more about this model or our results, you can find our paper
+									<a href="https://doi.org/10.1029/2020GL092149">here</a>.
+								</p>
+							</div>
+					
+						<!-- Metabolism circular stats -->
+							<div class="modal-content" data-target="metabolism-circular">
+								<i class="fas fa-times"></i>
+								<h3>Timing and Variance of Stream Metabolism</h3>
+								<img src="images/dataviz/metabolism-circular-gallery.png" alt="">
+								<h5>Description</h5>
+								<hr></hr>
+								<p>
+									River ecosystem metabolism is useful for understanding energetics and carbon cycling in flowing waters. 
+									Net ecosystem production (NEP) provides information on whether a river is autotrophic (NEP > 0) or heterotrophic (NEP < 0) 
+									and carbon dynamics within the ecosystem. Are there any consistent patterns in the timing of autotrophy or heterotrophy?
+								</p>
+
+								<p>
+									I used circular statistics to calculate the mean timing of days with positive or negative NEP for a few hundred rivers. 
+                  Additionally, the coherence (or dispersion) was also calculated to see if the timing of these events was concentrated in
+                   a specific time of year for each site.
+								</p>
+								
+                <p>
+                  A total of 44% of sites had a mean timing of autotrophy in summer and another 38% in spring. By contrast, 40% of sites 
+                  had a mean timing of heterotrophy in summer and 37% in autumn. While summer has high percentages of both autotrophy and 
+                  heterotrophy, it appears that positive NEP is more likely to happen in the spring and negative NEP in the autumn. 
+                  This is a simple conclusion in agreement with conceptual understanding of biogeochemical cycling, but useful to see it 
+                  so clearly highlighted in the data.
+                </p>
+							</div>
+
+						<!-- USGS monitoring ternary plot -->
+							<div class="modal-content" data-target="usgs-ternary">
+								<i class="fas fa-times"></i>
+								<h3>Water Quality Sensor Placement</h3>
+								<img src="images/dataviz/monitoring-ternary.jpg" alt="">
+								<h5>Description</h5>
+								<hr></hr>
+                <p>
+                  I looked at all active CONUS NWIS sites in 2024 that were recording common water quality measures
+                  (discharge, dissolved oxygen, specific conductance, turbidity, water temperature) to see what the
+                  surrounding land cover was. 46% of sites were situated in areas where natural land cover was the 
+                  dominant (>=60 %) class. By contrast, only 9% of sites were located where agriculture was the dominant class.
+                </p>
+
+                <p>
+                  If you are interested in a deep dive into global bias of stream gauge locations, check out 
+                  <a href="https://www.nature.com/articles/s41893-022-00873-0">Krabbenhoft et al. (2022)</a>
+                  for an excellent analysis.
+                </p>
+							</div>
+					
+            <!-- NWM timing -->
+              <div class="modal-content" data-target="nwm-timing">
+                <i class="fas fa-times"></i>
+								<h3>Average Month with Highest Streamflow</h3>
+                <img src="images/dataviz/nwm-timing.jpg" alt="">
+								<h5>Description</h5>
+								<hr></hr>
+                <p>
+                  Which month has the highest streamflow? I used retrospective estimates of streamflow 
+                  from the national water model for 18,495 U.S. streams spanning 1979-2020 to visualize 
+                  this question. Since modeled streamflow was used, I calculated all circular statistics 
+                  based on total monthly streamflow instead of using daily estimates.
+                </p>
+
+                <p>
+                  If you are interested in this kind of analysis using observed data, I would highly
+                  suggest reading <a href="https://www.sciencedirect.com/science/article/abs/pii/S0309170815002687?via%3Dihub">Villarini (2016)</a>.
+                </p>
+              </div>
+
+            <!-- Terrestrial phenology and stream metabolism -->
+              <div class="modal-content" data-target="phenology-metabolism">
+                <i class="fas fa-times"></i>
+								<h3>Terrestrial Phenology and River Metabolism</h3>
+                <img src="images/dataviz/phenology-metabolism.jpg" alt="">
+								<h5>Description</h5>
+								<hr></hr>
+                <p>
+                  I used MODIS vegetation dynamics data to get stages of terrestrial phenological development 
+                  at each site (e.g. greenup or senescence) and determined which stage of development autotrophy 
+                  and heterotrophy occurred in.
+                </p>
+
+                <p>
+                  Autotrophy was relatively evenly distributed throughout phenological stages, with about 25% of 
+                  sites falling into each stage outside of dormancy. By contrast, 59% of sites had their mean
+                  timing of heterotrophy occur during senescence. The prevalence of heterotrophy during senescence
+                  of terrestrial vegetation could be due to inputs of organic matter in the form of leaf litterfall.
+                </p>
+
+                <p>
+                  If this topic interests you, <a href="https://aslopubs.onlinelibrary.wiley.com/doi/10.1002/lno.12207">Bertuzzo et al. (2022)</a> 
+                  has a modeling study that looks into different sources of organic matter and river ecosystem respiration rates.
+                </p>
+              </div>
+
+            <!-- Savoy GRL -->
+              <div class="modal-content" data-target="savoy-grl">
+                <i class="fas fa-times"></i>
+								<h3>Modeling Light Limitations to River Productivity</h3>
+                <img src="images/dataviz/Savoy-GRL.jpg" alt="">
+								<h5>Description</h5>
+								<hr></hr>
+                <p>
+                  I developed a model to predict stream lighting conditions which accounted
+                  for reductions in available light from adjacent riparian zones and within
+                  the water column.
+                </p>
+
+                <p>
+                  We used the model to predict river productivity directly from light availability
+                  and show how accounting for successive attenuation of light from multiple sources
+                  produces productivity estimates which much more closely resemble observed patterns
+                  of river productivity.
+                </p>
+              </div>
+
+            <!-- NSF Macrosystems poster -->
+              <div class="modal-content" data-target="nsf-macrosystems">
+                <i class="fas fa-times"></i>
+								<h3>StreamPULSE NSF Macrosystems Poster</h3>
+                <img src="images/posters/nsf_macrosystems.jpg">
+								<a href="images/posters/nsf_macrosystems.jpg" class="button primary small" target="_blank" rel="noopener noreferrer">View full image in new tab</a>
+								<h5>Description</h5>
+								<hr></hr>
+                <p>
+									This is a poster presented for a meeting of active macrosystems projects at the NSF head office.
+									The collective rates of production and respiration are fundamental ecosystem properties, 
+									and when combined are referred to as ecosystem metabolism. Metabolism integrates across many 
+									organisms in a stream and provides useful information about energy cycling. This project aimed to
+									compile a large dataset of stream metabolism and perform synthetic analysis across many streams 
+									and rivers to identify common patterns of metabolism and link those patterns to likely drivers.
+								</p>
+
+								<p>
+									You can learn more about the StreamPULSE project <a href="https://pulseofstreams.weebly.com/">here</a> or
+									explore the data via the <a href="https://data.streampulse.org/">data portal</a>.
+								</p>
+              </div>
+
+            <!-- AGU 2015 poster-->
+              <div class="modal-content" data-target="agu-2015">
+                <i class="fas fa-times"></i>
+								<h3>AGU 2015 Poster</h3>
+                <img src="images/posters/AGU-2015.jpg">
+								<a href="images/posters/AGU-2015.jpg" class="button primary small" target="_blank" rel="noopener noreferrer">View full image in new tab</a>
+								<h5>Description</h5>
+								<hr></hr>
+                <p>
+                  Environmental conditions and plant biology interact to produce varied seasonal 
+                  patterns of leaf development. I found a positive relationship between leaf foliar
+                  nitrogen and rates of canopy expansion. I then modeled rates of canopy expansion
+                  based only on meteorological conditions and foliar nitrogen at 17 sites 
+                  across different biomes. Modeled estimates of canopy expansion rates were
+                  very strongly correlated to observations for all 93 site-years of data.
+                </p>
+              </div>
+
+            <!-- AGU 2013 poster-->
+              <div class="modal-content" data-target="agu-2013">
+                <i class="fas fa-times"></i>
+								<h3>AGU 2013 Poster</h3>
+                <img src="images/posters/AGU-2013.jpg">
+								<a href="images/posters/AGU-2013.jpg" class="button primary small" target="_blank" rel="noopener noreferrer">View full image in new tab</a>
+								<h5>Description</h5>
+								<hr></hr>
+                <p>
+                  I modified a simple prognostic phenology model to predict the seasonality of leaf area index.
+                  The model was tested at 5 sites and modeled estimates were very strongly correlated to observations.
+                  This work showed that a simple model was able to predict the timing and magnitude of canopy phenology
+                  using only meteorological data and some basic data-driven assumptions about how temperature, light, 
+                  and water stress limit plant development.
+                </p>
+              </div>
+              
+					</div>
+
+				<!-- =======================  FOOTER ======================= -->
+					<footer class="wrapper style1 color3 align-center">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="https://www.linkedin.com/in/phil-savoy-660057300/" class="icon brands style2 fa-linkedin"><span
+											class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/psavoy" class="icon brands style2 fa-github"><span class="label">Github</span></a>
+								</li>
+								<li><a href="https://orcid.org/0000-0002-6075-837X" class="icon brands style2 fa-orcid"><span
+											class="label">ORCiD</span></a></li>
+							</ul>
+							<p>&copy; Philip Savoy, 2026. Design powered by <a href="https://html5up.net">HTML5 UP</a> with heavy customization.
+							</p>
+						</div>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/modal.js"></script>
+
+			<script>
+				function showSidebar() {
+					const sidebar = document.querySelector('.sidebar')
+					sidebar.style.display = 'flex'
+				}
+				function hideSidebar() {
+					const sidebar = document.querySelector('.sidebar')
+					sidebar.style.display = 'none'
+				}
+			</script>
+
+			<!-- Modal scripts -->
+
+
+	</body>
+</html>
