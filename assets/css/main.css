@@ -531,7 +531,6 @@ img {
 	align-items: center;
 	padding: 2rem;
 	opacity: 0;
-	font-size: 0.8rem;
 	-moz-transition: opacity 0.2s ease-in-out;
 	-webkit-transition: opacity 0.2s ease-in-out;
 	-ms-transition: opacity 0.2s ease-in-out;
@@ -552,6 +551,7 @@ img {
 	margin-right: 0rem;
 	color: #fff;
 	line-height: 1rem;
+	font-size: 0.8rem;
 }
 
 /* Display image caption on hover */
